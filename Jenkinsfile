@@ -58,7 +58,7 @@ pipeline
 		{
 			steps
 			{
-				sh 'sudo docker run -itd -P palakagrawal25/ab-30jan2021:latest'
+				sh 'sudo docker run -itd -P palakagrawal25/ab-30jan2022:latest'
 			}
 		}
 		
