@@ -39,10 +39,10 @@ pipeline
 		{
 			steps
 			{
-				sh 'sudo mkdir -p /code/$PROJECT_NAME/$BUILD_NUMBER'
-				sh 'sudo cp /var/lib/jenkins/workspace/$PROJECT_NAME/target/website.war /code/$PROJECT_NAME/$BUILD_NUMBER/'
-				sh 'sudo cp /var/lib/jenkins/workspace/$PROJECT_NAME/Dockerfile /code/$PROJECT_NAME/$BUILD_NUMBER/'
-				sh 'sudo docker build -f /code/$PROJECT_NAME/$BUILD_NUMBER/Dockerfile -t palakagrawaljk/ab-30jan2022:$BUILD_NUMBER /code/$PROJECT_NAME/$BUILD_NUMBER'
+				sh 'sudo mkdir -p /code/isis/$BUILD_NUMBER'
+				sh 'sudo cp /var/lib/jenkins/workspace/isis/target/website.war /code/isis/$BUILD_NUMBER/'
+				sh 'sudo cp /var/lib/jenkins/workspace/isis/Dockerfile /code/isis/$BUILD_NUMBER/'
+				sh 'sudo docker build -f /code/isis$BUILD_NUMBER/Dockerfile -t palakagrawaljk/ab-30jan2022:$BUILD_NUMBER /code/isis/$BUILD_NUMBER'
 			}
 		}
 
