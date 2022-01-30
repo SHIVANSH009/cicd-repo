@@ -42,7 +42,7 @@ pipeline
 				sh 'sudo mkdir -p /code/isis/$BUILD_NUMBER'
 				sh 'sudo cp /var/lib/jenkins/workspace/isis/target/addressbook.war /code/isis/$BUILD_NUMBER/'
 				sh 'sudo cp /var/lib/jenkins/workspace/isis/Dockerfile /code/isis/$BUILD_NUMBER/'
-				sh 'sudo docker build -f /code/isis/$BUILD_NUMBER/Dockerfile -t palakagrawaljk/ab-30jan2022:$BUILD_NUMBER /code/isis/$BUILD_NUMBER'
+				sh 'sudo docker build -f /code/isis/$BUILD_NUMBER/Dockerfile -t palakagrawal25/ab-30jan2022:$BUILD_NUMBER /code/isis/$BUILD_NUMBER'
 			}
 		}
 
@@ -50,7 +50,7 @@ pipeline
 		{
 			steps
 			{
-				sh 'sudo docker push palakagrawaljk/ab-30jan2022:$BUILD_NUMBER'
+				sh 'sudo docker push palakagrawal25/ab-30jan2022:$BUILD_NUMBER'
 			}
 		}
 
@@ -58,7 +58,7 @@ pipeline
 		{
 			steps
 			{
-				sh 'sudo docker run -itd -P palakagrawaljk/ab-30jan2021:$BUILD_NUMBER'
+				sh 'sudo docker run -itd -P palakagrawal25/ab-30jan2021:$BUILD_NUMBER'
 			}
 		}
 		
