@@ -50,7 +50,7 @@ pipeline
 		{
 			steps
 			{
-				sh 'sudo docker push palakagrawal25/ab-30jan2022:$BUILD_NUMBER'
+				sh 'docker push palakagrawal25/ab-30jan2022:$BUILD_NUMBER'
 			}
 		}
 
@@ -58,7 +58,7 @@ pipeline
 		{
 			steps
 			{
-				sh 'sudo docker run -itd -P palakagrawal25/ab-30jan2021:$BUILD_NUMBER'
+				sh 'docker run -itd -P palakagrawal25/ab-30jan2021:$BUILD_NUMBER'
 			}
 		}
 		
